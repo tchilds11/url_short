@@ -1,0 +1,30 @@
+candies = [2, 3, 5, 1, 3, 8, 2, 6, 4, 1, 3]
+extraCandies = 5
+​
+def get_highest_candy(list):
+    i = 0
+    highest_candies = 0
+    while i < len(list):
+        if list[i] > highest_candies:
+            highest_candies = candies[i]
+        i += 1
+    return highest_candies
+​
+def check_each_kid(list, highest, extra):
+    i = 0
+    check_new_highest = []
+    while i < len(list):
+        if list[i] + extra >= highest:
+            check_new_highest.append(True)
+        else:
+            check_new_highest.append(False)
+        i += 1
+    return(new_highest_list)
+​
+highest_candies = get_highest_candy(candies)
+​
+print(highest_candies)
+​
+new_highest_list = check_each_kid(candies, highest_candies, extraCandies)
+​
+print(new_highest_list)
